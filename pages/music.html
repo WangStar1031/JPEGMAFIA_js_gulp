@@ -1,0 +1,46 @@
+
+<a href="#" id="img_container" style="position: relative;">
+</a>
+
+<style type="text/css">
+  #img_container img {
+    /*left:0;*/
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+  }
+
+  #img_container img.transparent {
+    opacity:1;
+  }
+</style>
+<script type="text/javascript">
+    var images = [
+            'img/1.jpg',
+            'img/2.jpg',
+            'img/3.jpg'
+          ]
+    i = 0;
+    for( var j = 0; j < images.length; j++){
+    var strHtml = '<img id="gallery" src="' + images[j] + '" />';
+    $("#img_container").append(strHtml);
+    }
+    $("#img_container img").eq(0).addClass("transparent");
+    $("#img_container img").eq(0).css("z-index", "10");
+// <img id="gallery" src="img/1.jpg" style="opacity: 1;">
+    document.getElementById('img_container').addEventListener('click', function() {
+        var curId = i;
+        i = i >= tees.length - 1 ? i = 0 : ++i;
+        var nextId = i;
+        $("#img_container img").eq(curId).toggleClass("transparent");
+        $("#img_container img").eq(nextId).toggleClass("transparent");
+        $("#img_container img").css("z-index", "0");
+        $("#img_container img").eq(nextId).css("z-index", "10");
+    }, false);
+</script>
+
+
+<iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=1463019338/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="http://jpegmafia.bandcamp.com/album/veteran">Veteran by JPEGMAFIA</a></iframe>

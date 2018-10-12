@@ -1,0 +1,15 @@
+<div class="merch-photos"><a href="#!"><img id="shirt" src="img/t1.jpg"><script type="text/javascript">var tees = [
+            'img/t2.jpg',
+            'img/t3.jpg',
+            'img/t1.jpg'
+             ],
+          i = 1;
+
+      for (var j=tees.length; j--;) {
+          var img = new Image();
+          img.src = tees[j];
+      }
+
+      document.getElementById('shirt').addEventListener('click', function() {
+          this.src = tees[i >= tees.length - 1 ? i = 0 : ++i];
+      }, false);</script></a></div><div class="merch-info"><h1>Rock N Roll is Dead T-Shirt</h1><h2>$23 USD</h2><p>T-shirt to commemorate the death of the most irrelevant genre in music today.<br><br>Includes unlimited streaming of Veteran via the free Bandcamp app, plus high-quality download in MP3, FLAC and more.</p><a href="https://jpegmafia.bandcamp.com/merch/rock-n-roll-is-dead-t-shirt" target="_blank">PURCHASE</a></div>

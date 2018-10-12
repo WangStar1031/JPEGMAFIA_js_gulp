@@ -1,0 +1,49 @@
+
+@media screen and (max-width: 823px) and (orientation: landscape) {
+
+  .page-name {
+    display: none;
+  }
+
+  #uno {
+    border: none;
+    height: 100%!important;
+    width: 100%!important;
+  }
+
+  #live .content {
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    opacity: 1;
+  }
+
+  #live-wrapper iframe {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  #live-wrapper a {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  #dos {
+    display: none;
+  }
+
+  #live {
+    display: none;
+  }
+
+  #cuatro {
+    display: none;
+  }
+
+
+}

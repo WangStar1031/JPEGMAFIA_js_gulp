@@ -1,0 +1,57 @@
+<div id="cf2" class="shadow">
+  <img id="Gallery" src="img/1.jpg" style="opacity: 1;" />
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style type="text/css">
+  #cf2 {
+    position:relative;
+    height:281px;
+    width:450px;
+    margin:0 auto;
+  }
+  #cf2 img {
+    width: 400px;
+    position:absolute;
+    left:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+
+  #cf2 img.transparent {
+    opacity:1;
+  }
+  #cf_onclick {
+  cursor:pointer;
+  }
+</style>
+<script type="text/javascript">
+  var images = [
+          'img/1.jpg',
+          'img/2.jpg',
+          'img/3.jpg'
+        ]
+  var i = 0;
+
+  document.getElementById('cf2').addEventListener('click', function() {
+    var src = images[i >= images.length - 1 ? i = 0 : ++i];
+    var strHtml = '<img id="Gallery" src="' + src + '" />';
+    $(this).html(strHtml);
+    setTimeout(function(){
+      $("#Gallery").toggleClass("transparent");
+    });
+    
+    // $(this).removeClass("transparent");
+    // $(this).addClass("transparent");
+  }, false);
+
+  // $(document).ready(function() {
+  //   $("#cf2").click(function() {
+  //     $("#cf2 img.top").toggleClass("transparent");
+  //   });
+  // });
+</script>

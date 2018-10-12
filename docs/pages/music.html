@@ -1,0 +1,15 @@
+<a href="#"><img id="gallery" src="img/1.jpg"></a><script type="text/javascript">var images = [
+            'img/2.jpg',
+            'img/3.jpg',
+            'img/1.jpg'
+          ]
+        i = 1;
+
+    for (var j=images.length; j--;) {
+        var img = new Image();
+        img.src = images[j];
+    }
+
+    document.getElementById('gallery').addEventListener('click', function() {
+        this.src = images[i >= images.length - 1 ? i = 0 : ++i];
+    }, false);</script><iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=1463019338/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="http://jpegmafia.bandcamp.com/album/veteran">Veteran by JPEGMAFIA</a></iframe>
